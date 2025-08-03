@@ -88,7 +88,7 @@ const educationItems: ExperienceItemProps[] = [
     description: "Ensino técnico integrado com médio.",
   },
   {
-    title: "Engenharia de Software",
+    title: "Arquitetura de Software",
     company: "FIAP - Pós-graduação",
     duration: "2022 - 2025",
     description: "Ensino técnico integrado com médio.",

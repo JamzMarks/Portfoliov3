@@ -11,7 +11,7 @@ export const Contact = () => {
         // subtitle="Se tiver alguma pergunta ou proposta, sinta-se à vontade para entrar em contato!"
         title="Entre em Contato"
       ></SectionTitle>
-      <div className="space-y-4">
+      <div className="space-y-4 lg:flex lg:justify-between lg:items-center">
         <ContactLink
           Icon={MdEmail}
           text="Email"
