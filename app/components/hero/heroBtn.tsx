@@ -6,7 +6,7 @@ export const HeroBtn = () => {
       {/* Botão de Contato */}
       <a
         href="#contact"
-        className="flex items-center gap-2 bg-cyan-500 px-4 py-2 sm:px-6 sm:py-3 rounded-full font-medium text-sm sm:text-base hover:bg-cyan-700 transition"
+        className="flex items-center gap-2 bg-cyan-600 px-4 py-2 sm:px-6 sm:py-3 rounded-full font-medium text-sm hover:bg-cyan-700 transition"
       >
         <FaEnvelope size={16} /> Entre em Contato
       </a>

@@ -38,7 +38,7 @@ export const Hero = () => {
             src="/me.jpg" // Substitua pelo seu arquivo Memoji
             alt="James Marques Avatar"
             fill
-            className="rounded-full object-cover"
+            className="rounded-full object-cover shadow-md shadow-cyan-500"
           />
         </div>
       </motion.div>

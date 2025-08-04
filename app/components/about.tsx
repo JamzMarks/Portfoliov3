@@ -59,10 +59,10 @@ const CvButton = ({ title, path }: CvButtonProps) => {
       target="_blank"
       rel="noopener noreferrer"
       whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.98 }}
-      className="max-w-1/3 inline-flex items-center gap-2 border border-cyan-500 text-cyan-500 font-medium py-1 px-4 rounded-xl transition-colors hover:bg-cyan-500 hover:text-white group"
+      whileTap={{ scale: 0.95 }}
+      className="inline-flex items-center gap-2 rounded-full border border-cyan-400 text-cyan-400 px-5 py-1 font-medium text-sm hover:bg-cyan-600 hover:text-white transition-colors duration-300 shadow-md hover:shadow-cyan-500/30"
     >
-      <FaFileDownload className="transition-transform duration-300 group-hover:rotate-[-20deg]" />
+      <FaFileDownload className="transition-transform duration-300 group-hover:-rotate-12" />
       {title}
     </motion.a>
   );

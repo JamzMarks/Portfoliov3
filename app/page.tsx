@@ -9,7 +9,10 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <About />
+      <div className="overflow-x-hidden mb-20 lg:mb-10">
+        <About />
+
+      </div>
       <div className="flex flex-col gap-[80px] items-center sm:items-start">
         <Skills />
         <Experience />
