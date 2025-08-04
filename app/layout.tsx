@@ -35,7 +35,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable}  antialiased grid grid-rows-[1fr_auto] min-h-screen`}
       >
-        <header className="w-full px-4 h-20 fixed top-0 left-0 text-white bg-transparent backdrop-blur-sm">
+        <header className="w-full px-4 h-20 fixed top-0 left-0 text-white bg-transparent backdrop-blur-sm z-50">
           <Navbar />
         </header>
         <main className="max-w-7xl w-full mx-auto mt-20 px-4 mb-20">

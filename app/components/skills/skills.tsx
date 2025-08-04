@@ -31,8 +31,10 @@ import {
 import { FaDatabase, FaCode, FaJava } from "react-icons/fa";
 import { TbBrandCSharp } from "react-icons/tb";
 import { SkillCategory } from "./skillCategory";
-import {  useState } from "react";
+import { useState } from "react";
 import { SkillsWrapper } from "./skillsWrapper";
+import { IoCodeSlash } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 export const Skills = () => {
   const [skills, setSkills] = useState<string>("lang");
@@ -46,26 +48,35 @@ export const Skills = () => {
     { id: "styles", label: "Estilização" },
   ];
   return (
-    <section id="skills" className="text-white w-full">
+    <motion.section
+      id="skills"
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="text-white w-full  py-10"
+    >
       <SectionTitle
         // subtitle="Algumas das minhas principais ferramentas e habilidades em desenvolvimento Full-Stack e arquitetura de software."
         title="Principais Habilidades"
+        Icon={IoCodeSlash}
       />
 
-      <div className="flex flex-col gap-10 mt-12">
+      <div className="flex flex-col gap-8 mt-6">
         <div>
-          <ul className="flex flex-col justify-evenly sm:flex-row flex-wrap gap-2 sm:gap-4 text-sm">
-        {tabs.map((tab) => (
-          <li key={tab.id}>
-            <button
-              onClick={() => setSkills(tab.id)}
-              className={`
+          <ul className="flex justify-around lg:justify-evenly sm:flex-row flex-wrap gap-2 sm:gap-4 text-sm ">
+            {tabs.map((tab) => (
+              <li key={tab.id}>
+                <button
+                  onClick={() => setSkills(tab.id)}
+                  className={` cursor-pointer z-10
                 relative px-4 py-2 text-left sm:text-center
                 text-gray-400 transition-colors duration-200
                 hover:text-white
                 before:absolute before:left-0 before:bottom-0
                 before:w-0 before:h-[2px] before:bg-cyan-500 before:transition-all
-                sm:before:left-1/2 sm:before:transform sm:before:-translate-x-1/2
+                sm:before:left-1/2 sm:before:transform sm:before:-translate-x-1/2 before:z-0
+                
 
                 ${
                   skills === tab.id
@@ -73,12 +84,12 @@ export const Skills = () => {
                     : "before:w-0"
                 }
               `}
-            >
-              {tab.label}
-            </button>
-          </li>
-        ))}
-      </ul>
+                >
+                  {tab.label}
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
         <div>
           {skills === "lang" && (
@@ -89,9 +100,9 @@ export const Skills = () => {
                   { title: "JavaScript", icon: <SiJavascript /> },
                   { title: "TypeScript", icon: <SiTypescript /> },
                   { title: "Java", icon: <FaJava /> },
-                  { title: "C#", icon: <TbBrandCSharp /> },
                   { title: "Python", icon: <SiPython /> },
                   { title: "HTML", icon: <SiHtml5 /> },
+                  { title: "C#", icon: <TbBrandCSharp /> },
                 ]}
               />
             </SkillsWrapper>
@@ -122,21 +133,20 @@ export const Skills = () => {
               />
             </SkillsWrapper>
           )}
-          {skills === "db" && (
-            <SkillsWrapper name="tool">
+          {skills === "styles" && (
+            <SkillsWrapper name="styles">
               <SkillCategory
-                title="Banco de Dados"
+                title="Estilização"
                 skills={[
-                  { title: "MySQL", icon: <SiMysql /> },
-                  { title: "PostgreSQL", icon: <SiPostgresql /> },
-                  { title: "MongoDB", icon: <SiMongodb /> },
-                  { title: "Redis", icon: <SiRedis /> },
+                  { title: "Tailwind CSS", icon: <SiTailwindcss /> },
+                  { title: "Styled Components", icon: <SiStyledcomponents /> },
+                  { title: "CSS", icon: <SiCss3 /> },
                 ]}
               />
             </SkillsWrapper>
           )}
           {skills === "api" && (
-            <SkillsWrapper name="tool">
+            <SkillsWrapper name="api">
               <SkillCategory
                 title="APIs & Orquestração"
                 skills={[
@@ -150,7 +160,7 @@ export const Skills = () => {
             </SkillsWrapper>
           )}
           {skills === "devops" && (
-            <SkillsWrapper name="tool">
+            <SkillsWrapper name="devops">
               <SkillCategory
                 title="DevOps & Mensageria"
                 skills={[
@@ -162,20 +172,21 @@ export const Skills = () => {
               />
             </SkillsWrapper>
           )}
-          {skills === "styles" && (
-            <SkillsWrapper name="tool">
+          {skills === "db" && (
+            <SkillsWrapper name="db">
               <SkillCategory
-                title="Estilização"
+                title="Banco de Dados"
                 skills={[
-                  { title: "Tailwind CSS", icon: <SiTailwindcss /> },
-                  { title: "CSS", icon: <SiCss3 /> },
-                  { title: "Styled Components", icon: <SiStyledcomponents /> },
+                  { title: "MySQL", icon: <SiMysql /> },
+                  { title: "PostgreSQL", icon: <SiPostgresql /> },
+                  { title: "MongoDB", icon: <SiMongodb /> },
+                  { title: "Redis", icon: <SiRedis /> },
                 ]}
               />
             </SkillsWrapper>
           )}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
