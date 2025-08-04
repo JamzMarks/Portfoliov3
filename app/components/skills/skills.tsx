@@ -54,7 +54,7 @@ export const Skills = () => {
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="text-white w-full  py-10"
+      className="text-white w-full scroll-mt-30 py-10"
     >
       <SectionTitle
         // subtitle="Algumas das minhas principais ferramentas e habilidades em desenvolvimento Full-Stack e arquitetura de software."

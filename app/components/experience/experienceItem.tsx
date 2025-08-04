@@ -25,7 +25,7 @@ export const ExperienceItem = ({
           {duration}
         </time>
       </div>
-      {description && <p className="mt-3 text-gray-400">{description}</p>}
+      {description && <p className="mt-3 text-gray-400 text-sm">{description}</p>}
     </div>
   );
 };

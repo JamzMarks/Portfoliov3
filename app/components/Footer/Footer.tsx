@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <div>
+    <div id="footer">
       <div className="max-w-7xl text-white text-center w-full h-full md:grid md:grid-cols-2 md:gap-8 p-6 mx-auto">
         <div className="space-y-2 lg:text-left">
           <h2 className="text-2xl font-bold">James Marques</h2>
