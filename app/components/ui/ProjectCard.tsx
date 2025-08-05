@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectCardTechs } from "./ProjectCardTech";
-
+import { FaGithub } from "react-icons/fa";
 export interface ProjectCardProps {
   title: string;
   imageUrl: string;
@@ -36,12 +36,12 @@ export const ProjectCard = ({
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className=" w-fit px-4 py-2 rounded-full bg-cyan-600 text-white text-sm font-medium hover:bg-cyan-500 transition-colors flex gap-2 items-center"
+          className=" w-fit px-4 py-2 rounded-md bg-black text-white text-sm font-medium hover:bg-cyan-900 transition-colors flex gap-2 items-center"
         >
-          <FaEye/> Ver Projeto
+          <FaGithub/> Ver no Github
         </Link>
       </div>
     </div>
   );
 };
-import { FaEye } from "react-icons/fa";
+
