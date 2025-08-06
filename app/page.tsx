@@ -11,7 +11,6 @@ export default function Home() {
       <Hero />
       <div className="overflow-x-hidden mb-20 lg:mb-10">
         <About />
-
       </div>
       <div className="flex flex-col gap-[80px] items-center sm:items-start">
         <Skills />

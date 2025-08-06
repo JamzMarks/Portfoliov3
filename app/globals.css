@@ -31,3 +31,12 @@ body {
   color: var(--foreground);
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
+
+.swiper-pagination-bullet {
+  background-color: red;
+}
+
+/* Bullet ativo */
+.swiper-pagination-bullet-active {
+  @apply bg-red-500 opacity-100 scale-125;
+}

@@ -3,6 +3,7 @@ import { SectionTitle } from "../ui/SectionTitle";
 import { GrProjects } from "react-icons/gr";
 import { ProjectCard, ProjectCardProps } from "../ui/ProjectCard";
 import { useState } from "react";
+import { ProjectsSwiper } from "./ProjectsSwiper";
 
 const tabs = [
   { id: "acad", label: "Academicos" },
@@ -22,21 +23,21 @@ const academicProjects: ProjectCardProps[] = [
   {
     title: "Trash Killer 2",
     description: "Meu portfolio pessoal.",
-    imageUrl: "/projects/a.png",
+    imageUrl: "/projects/trashkiller.png",
     link: "https://github.com/JamzMarks/TrashKiller2",
     techs: ["C#", "Unity", "Photon"],
   },
   {
     title: "Arduino Line Follower",
     description: "Meu portfolio pessoal.",
-    imageUrl: "/projects/a.png",
+    imageUrl: "/projects/arduino.jpg",
     link: "https://github.com/JamzMarks/Arduino-Line-Follower",
     techs: ["Arduino", "C++"],
   },
   {
     title: "Zucco Motori - APS1",
     description: "Meu portfolio pessoal.",
-    imageUrl: "/projects/a.png",
+    imageUrl: "/projects/zucco.png",
     link: "https://github.com/JamzMarks/APS---S1",
     techs: ["HTML", "CSS", "JavaScript"],
   },
@@ -75,7 +76,7 @@ const professionalProjects: ProjectCardProps[] = [
     title: "Shop.co",
     description:
       "Meu portfolio pessoal. Meu portfolio pessoal. Meu portfolio pessoal. Meu portfolio pessoal. Meu portfolio pessoal.Meu portfolio pessoal. Meu portfolio pessoal.",
-    imageUrl: "/projects/a.png",
+    imageUrl: "/projects/shop.co.png",
     link: "https://github.com/JamzMarks/Portfoliov3",
     techs: ["React", "HTML", "CSS", "SCSS", "TypeScript"],
   },
@@ -131,7 +132,7 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full py-10 text-white text-center scroll-mt-30 overflow-x-hidden"
+      className="w-full py-10 text-white text-center scroll-mt-30"
     >
       <SectionTitle title="Projetos" Icon={GrProjects} />
 
@@ -139,6 +140,7 @@ export const Projects = () => {
       <div className="w-full flex flex-col gap-8 mt-6">
         <div>
           <ul className="flex justify-around lg:justify-evenly sm:flex-row flex-wrap gap-2 sm:gap-4 text-sm ">
+
             {tabs.map((tab) => (
               <li key={tab.id}>
                 <button
@@ -166,46 +168,11 @@ export const Projects = () => {
           </ul>
         </div>
         <div className="flex flex-col gap-6 justify-center justify-items-center">
-          {projects === "acad" &&
-            academicProjects.map((item) => (
-              <div className="w-3/4 self-center">
-                <ProjectCard
-                  key={item.link}
-                  title={item.title}
-                  description={item.description}
-                  imageUrl={item.imageUrl}
-                  link={item.link}
-                  techs={item.techs}
-                />
-              </div>
-            ))}
-            {projects === "professional" &&
-            professionalProjects.map((item) => (
-              <div className="w-3/4 self-center">
-                <ProjectCard
-                  key={item.link}
-                  title={item.title}
-                  description={item.description}
-                  imageUrl={item.imageUrl}
-                  link={item.link}
-                  techs={item.techs}
-                />
-              </div>
-            ))}
-            {projects === "personal" &&
-            personalProjects.map((item) => (
-              <div className="w-3/4 self-center">
-                <ProjectCard
-                  key={item.link}
-                  title={item.title}
-                  description={item.description}
-                  imageUrl={item.imageUrl}
-                  link={item.link}
-                  techs={item.techs}
-                />
-              </div>
-            ))}
+          {projects === "acad" && <ProjectsSwiper projects={academicProjects}/>}
+            {projects === "professional" && <ProjectsSwiper projects={professionalProjects}/>}
+            {projects === "personal" && <ProjectsSwiper projects={personalProjects}/>}
         </div>
+        
       </div>
     </section>
   );
