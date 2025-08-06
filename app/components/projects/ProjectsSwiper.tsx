@@ -64,6 +64,7 @@ export const ProjectsSwiper = ({ projects }: ProjectsSwiperProps) => {
                 imageUrl={item.imageUrl}
                 link={item.link}
                 techs={item.techs}
+                onGoing={item.onGoing}
               />
             </div>
           </SwiperSlide>

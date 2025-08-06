@@ -9,6 +9,7 @@ export interface ProjectCardProps {
   description: string;
   link: string;
   techs: string[];
+  onGoing?: boolean;
 }
 
 export const ProjectCard = ({
@@ -17,6 +18,7 @@ export const ProjectCard = ({
   imageUrl,
   link,
   techs,
+  onGoing
 }: ProjectCardProps) => {
   return (
     <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
@@ -44,10 +46,18 @@ export const ProjectCard = ({
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 px-2 py-1">
-        <h3 className="text-xl font-semibold text-white">{title}</h3>
-        <p className="text-sm text-gray-400">{description}</p>
-        <ProjectCardTechs techs={techs} />
+      <div className="flex flex-col justify-between gap-4 px-2 py-1 text-left">
+        <div className="space-y-4">
+          <div className="space-y-1">
+            <h3 className="text-xl font-semibold text-white">{title} </h3>
+            {onGoing && <span className="text-xs text-cyan-500 underline">Em andamento</span>}
+          </div>
+          <p className="text-sm text-gray-400">{description}</p>
+
+        </div>
+        <div>
+          <ProjectCardTechs techs={techs} />
+        </div>
         <Link
           href={link}
           target="_blank"
