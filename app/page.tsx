@@ -4,6 +4,7 @@ import { Projects } from "./components/projects/projects";
 import { Skills } from "./components/skills/skills";
 import { Experience } from "./components/experience/experience";
 import { Hero } from "./components/hero/hero";
+import { Certificates } from "./components/certificates/certificates";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <div className="flex flex-col gap-[80px] items-center sm:items-start">
         <Skills />
         <Experience />
+        <Certificates/>
         <Projects />
         <Contact />
       </div>

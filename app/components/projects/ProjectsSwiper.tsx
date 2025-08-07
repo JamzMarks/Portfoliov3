@@ -30,15 +30,17 @@ export const ProjectsSwiper = ({ projects }: ProjectsSwiperProps) => {
         direction="next"
       />
       <Swiper
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, 
+          // Pagination
+        ]}
         slidesPerView={1}
         spaceBetween={20}
         loop={true}
         speed={600}
-        pagination={{ clickable: true, 
-          bulletActiveClass: "swiper-pagination-bullet", 
-          bulletClass: "swiper-pagination-bullet-active" 
-        }}
+        // pagination={{ clickable: true, 
+        //   bulletActiveClass: "swiper-pagination-bullet", 
+        //   bulletClass: "swiper-pagination-bullet-active" 
+        // }}
         onBeforeInit={(swiper) => {
           // @ts-ignore
           swiper.params.navigation.prevEl = prevRef.current;

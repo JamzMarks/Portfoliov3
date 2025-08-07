@@ -8,7 +8,7 @@ interface ProjectCardTechsProps {
 export const ProjectCardTechs: FC<ProjectCardTechsProps> = ({ techs }) => {
   return (
     <div className="space-y-2">
-      <p className="block">Principais Tecnologias:</p>
+      <p className="block text-sm">Principais Tecnologias:</p>
       <div className="flex flex-wrap gap-2">
         {techs.map((item, index) => (
           <span

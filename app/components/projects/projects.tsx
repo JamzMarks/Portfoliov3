@@ -6,7 +6,7 @@ import { useState } from "react";
 import { ProjectsSwiper } from "./ProjectsSwiper";
 
 const tabs = [
-  { id: "acad", label: "Academicos" },
+  { id: "acad", label: "Acadêmicos" },
   { id: "personal", label: "Pessoais" },
   { id: "professional", label: "Profissionais" },
 ];
@@ -50,7 +50,7 @@ const professionalProjects: ProjectCardProps[] = [
     title: "Portfolio v3",
     description:
       "Terceira versão do meu portfólio pessoal, desenvolvido com Next.js, React e Tailwind CSS. Layout responsivo, design moderno e animações suaves para apresentar projetos e habilidades de forma interativa.",
-    imageUrl: "/projects/port.png",
+    imageUrl: "/projects/port2.png",
     link: "https://github.com/JamzMarks/Portfoliov3",
     techs: ["Next.js", "TypeScript", "React", "Tailwind", "CSS"],
   },
@@ -102,7 +102,7 @@ const personalProjects: ProjectCardProps[] = [
     title: "Papirus API",
     description:
       "API robusta para o sistema Papirus, construída com Nest.js e Prisma, documentada via Swagger e integrada à AWS. Suporte a eventos assíncronos com Kafka, testes automatizados com Jest e arquitetura modular escalável.",
-    imageUrl: "/projects/a.png",
+    imageUrl: "/projects/programming.png",
     link: "https://github.com/JamzMarks/instruct",
     techs: [
       "Nest.js",
