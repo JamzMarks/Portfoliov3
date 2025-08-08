@@ -15,13 +15,13 @@ export const Hero = () => {
     >
       {/* Redes Sociais */}
       <div className="flex flex-col gap-6 absolute left-4 md:left-8 top-1/6 md:top-1/3">
-        <Link href="https://www.linkedin.com/in/james-marques-48828422b//" target="_blank">
+        <Link href="https://www.linkedin.com/in/james-marques-48828422b//" target="_blank" aria-label="Linkedin">
           <FaLinkedinIn size={20} className="hover:text-cyan-500 transition" />
         </Link>
-        <Link href="https://www.instagram.com/jamzmarks" target="_blank">
+        <Link href="https://www.instagram.com/jamzmarks" target="_blank" aria-label="Instagram">
           <FaInstagram size={20} className="hover:text-cyan-500 transition" />
         </Link>
-        <Link href="https://github.com/JamzMarks" target="_blank">
+        <Link href="https://github.com/JamzMarks" target="_blank" aria-label="Github">
           <FaGithub size={20} className="hover:text-cyan-500 transition" />
         </Link>
       </div>
@@ -35,10 +35,11 @@ export const Hero = () => {
       >
         <div className="relative w-40 h-40 rounded-full bg-cyan-700 flex items-center justify-center">
           <Image
-            src="/me.jpg" // Substitua pelo seu arquivo Memoji
+            src="/me.jpg" 
             alt="James Marques Avatar"
             fill
             className="rounded-full object-cover shadow-md shadow-cyan-500"
+            priority   
           />
         </div>
       </motion.div>

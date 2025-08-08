@@ -73,7 +73,7 @@ export const Certificate = ({
         />
       </div>
       <div className="space-y-2">
-        <h4 className="font-semibold text-sm">{title}</h4>
+        <h3 className="font-semibold text-sm">{title}</h3>
         <div className="text-xs space-y-1 text-neutral-400">
           <p>{company}</p>
           {renderCredential()}

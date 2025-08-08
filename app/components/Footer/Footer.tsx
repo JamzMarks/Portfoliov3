@@ -14,12 +14,12 @@ export const Footer = () => {
         </div>
         <div >
           <ul className="flex justify-center space-x-4 mt-4 md:mt-0">
-            <li><Link href={"https://www.linkedin.com/in/james-marques-48828422b/#"}><IoLogoLinkedin className="w-8 h-8 hover:text-cyan-500"/></Link></li>
-            <li><Link href={"https://github.com/JamzMarks"}><FaGithub className="w-8 h-8 hover:text-cyan-500"/></Link></li>
+            <li><Link href={"https://www.linkedin.com/in/james-marques-48828422b/#"} aria-label="Linkedin"><IoLogoLinkedin className="w-8 h-8 hover:text-cyan-500"/></Link></li>
+            <li><Link href={"https://github.com/JamzMarks"} aria-label="Github"><FaGithub className="w-8 h-8 hover:text-cyan-500"/></Link></li>
           </ul>
         </div>
       </div>
-      <div className="text-center text-gray-500 py-4 text-sm">
+      <div className="text-center text-gray-400 py-4 text-sm">
         <p>Made by JamzMarks</p>
       </div>
     </div>
