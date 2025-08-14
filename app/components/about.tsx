@@ -38,8 +38,8 @@ export const About = () => {
         <div className="flex items-center gap-4 text-sm">
           <p>Baixe o meu Curriculo:</p>
           <div className="flex flex-row justify-evenly gap-4">
-            <CvButton title="PT" path="resumePT" />
-            <CvButton title="EN" path="resumeEN" />
+            <CvButton title="PT" path="James-Marques-PT.pdf" />
+            <CvButton title="EN" path="resumeEN.pdf" />
           </div>
         </div>
       </motion.div>
@@ -55,7 +55,7 @@ interface CvButtonProps {
 const CvButton = ({ title, path }: CvButtonProps) => {
   return (
     <motion.a
-      href={`/resume/${path}.pdf`}
+      href={`/resume/${path}`}
       target="_blank"
       rel="noopener noreferrer"
       whileHover={{ scale: 1.05 }}

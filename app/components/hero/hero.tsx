@@ -38,8 +38,7 @@ export const Hero = () => {
             src="/me.jpg" 
             alt="James Marques Avatar"
             fill
-            className="rounded-full object-cover shadow-md shadow-cyan-500"
-            priority   
+            className="rounded-full object-cover shadow-md shadow-cyan-500"   
           />
         </div>
       </motion.div>
